@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="601.0" vgap="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.view.AdminController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="175.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="283.0" minHeight="10.0" prefHeight="283.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ListView fx:id="listView" editable="true" prefHeight="283.0" prefWidth="237.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ListView>
+      <TextField fx:id="addUser" promptText="User Name..." GridPane.columnIndex="1" GridPane.rowIndex="1" />
+     <Button fx:id="addBtn" mnemonicParsing="false" onAction="#handleChange" text="Add User" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#handleChange" text="Delete (current user)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#handleChange" text="Logout" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#handleChange" text="Quit Application" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</GridPane>

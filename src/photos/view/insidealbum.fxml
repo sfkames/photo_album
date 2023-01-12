@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="photos.view.InsideAlbumController">
+   <bottom>
+      <ScrollPane fx:id="scroll" prefHeight="217.0" prefWidth="691.0" BorderPane.alignment="CENTER">
+         <content>
+            <HBox fx:id="hboxImage" prefHeight="100.0" prefWidth="200.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </bottom>
+   <right>
+      <GridPane prefHeight="204.0" prefWidth="156.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addPhotoBtn" mnemonicParsing="false" onAction="#handleChange" text="Add Photo">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="removePhotoBtn" layoutX="10.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleChange" text="Remove Photo" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="addEditCapBtn" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleChange" text="Add/Edit Caption" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="addTagBtn" layoutX="10.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleChange" text="Add Tag to Photo" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="deleteTagBtn" mnemonicParsing="false" onAction="#handleChange" text="Delete Tag From Photo" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="copyPhotoBtn" layoutX="10.0" layoutY="173.0" mnemonicParsing="false" onAction="#handleChange" text="Copy Photo to Album" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="movePhotoBtn" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleChange" text="Move Photo to Album" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#handleChange" text="Logout" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <TextField fx:id="albumName" promptText="Enter Name Album..." GridPane.rowIndex="6" />
+            <Button fx:id="quitBtn" mnemonicParsing="false" onAction="#handleChange" text="Quit Application" GridPane.rowIndex="11">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="returnAlbumBtn" mnemonicParsing="false" onAction="#handleChange" text="Return to All Albums" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin></Button>
+            <TextField fx:id="captionTF" promptText="Caption..." GridPane.rowIndex="2" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </GridPane>
+   </right>
+   <center>
+      <ImageView fx:id="mainImage" fitHeight="225.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@MeyerDaniel_DoublePersonality.jpg" />
+         </image>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <left>
+      <ListView fx:id="photoDetail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </ListView>
+   </left>
+</BorderPane>
