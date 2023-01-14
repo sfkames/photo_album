@@ -1,6 +1,7 @@
 # photo_album
 Single-user photo application that allows storage and management of photos in one or more albums
 
+CS213 Assignment 3
 Samantha Ames and Ahmed Elgazzar
 
 Features
